@@ -1,0 +1,5 @@
+SELECT TOP (1000) [ID]
+      ,[Name]
+      ,[Designation]
+      ,[Salary]
+  FROM [SECURITY_DB].[dbo].[Employee]

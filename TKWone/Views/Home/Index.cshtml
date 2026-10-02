@@ -1,0 +1,649 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_TKWone_Layout.cshtml";
+}
+<section style="background-color: #D2B48C; ">
+
+    <style>
+        .custom-title {
+            color: white;
+        }
+    </style>
+
+    <section id="slider">
+        <!--slider-->
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div id="slider-carousel" class="carousel slide" data-ride="carousel">
+                        <ol class="carousel-indicators">
+                            <li data-target="#slider-carousel" data-slide-to="0" class="active"></li>
+                            <li data-target="#slider-carousel" data-slide-to="1"></li>
+                            <li data-target="#slider-carousel" data-slide-to="2"></li>
+                        </ol>
+
+                        <div class="carousel-inner">
+                            <div class="item active">
+                                <div class="col-sm-6 ">
+                                    <h1><span>N</span>-Nhựt</h1>
+                                    <h2> mang đến sự vui vẻ cho bạn</h2>
+                                    <p>
+                                        Đây là kiểu trang phục mang hơi hướng business formal – phù hợp với các buổi họp quan trọng, sự kiện chuyên nghiệp, hoặc thậm chí là tiệc cưới.
+                                    </p>
+                                    <button type="button" class="btn btn-default get">xem ngay</button>
+                                </div>
+                                <div class="col-sm-6">
+
+                                    <img src="~/images/shop/product3.jpg" "  class="girl img-responsive"
+                                         " alt="" />
+                                    <img src="~/images/home/pricing.png" class="pricing" alt="" />
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="col-sm-6">
+                                    <h1><span>N</span>-Nhựt</h1>
+                                    <h2>mang đến sự lịch lảm cho bạn</h2>
+                                    <p>Lịch lãm, hiện đại, phù hợp với doanh nhân, người làm việc trong môi trường chuyên nghiệp hoặc tham dự sự kiện cao cấp. </p>
+                                    <button type="button" class="btn btn-default get">xem ngay</button>
+                                </div>
+                                <div class="col-sm-6">
+
+                                    <img src="~/images/shop/product2.jpg" class=" girl img-responsive
+                                    " alt="" />
+                                    <img src="~/images/home/pricing.png" class="pricing" alt="" />
+                                </div>
+                            </div>
+
+                            <div class="item">
+                                <div class="col-sm-6">
+                                    <h1><span>N </span>-Nhựt</h1>
+                                    <h2>mang đến sự trẻ trung cho bạn </h2>
+                                    <p>Glamorous – phù hợp với người có gu thời trang mạnh, thích nổi bật trong đám đông.</p>
+                                    <button type="button" class="btn btn-default get">xem ngay</button>
+                                </div>
+                                <div class="col-sm-6">
+
+
+                                    <img src="~/images/shop/product19.jpg" " class="girl img-responsive" alt="" />
+                                    <img src="~/images/home/pricing.png" class="pricing" alt="" />
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <a href="#slider-carousel" class="left control-carousel hidden-xs" data-slide="prev">
+                            <i class="fa fa-angle-left"></i>
+                        </a>
+                        <a href="#slider-carousel" class="right control-carousel hidden-xs" data-slide="next">
+                            <i class="fa fa-angle-right"></i>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section><!--/slider-->
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-3">
+                @Html.Partial("_Sidebar")
+            </div>
+            <div class="col-sm-9 padding-right">
+                <div class="features_items">
+                    <!--features_items-->
+                    <h2 class="title text-center">Features Items</h2>
+                    <div class="col-sm-4">
+                        <div class="product-image-wrapper">
+                            <div class="single-products">
+                                <div class="productinfo text-center">
+                                    <img src="~/images/shop/product3.jpg"class="img-fluid" style="width: 255px; height: 255px;" alt="" />
+                                    <h2>69k</h2>
+                                    <p>áo hoodi màu đen</p>
+                                    <a href="@Url.Action("Index","Product")" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>xem thêm</a>
+                                </div>
+                                <div class="product-overlay">
+                                    <div class="overlay-content">
+                                        <h2>69k</h2>
+                                        <p>áo hoodi màu đen</p>
+                                        <a href="@Url.Action("Index","Product")" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>xem thêm</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="choose">
+                                <ul class="nav nav-pills nav-justified">
+                                    <li><a href="@Url.Action("Index","Product")"><i class="fa fa-plus-square"></i>Add to wishlist</a></li>
+                                    <li><a href="@Url.Action("Index","Product")"><i class="fa fa-plus-square"></i>Add to compare</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="product-image-wrapper">
+                            <div class="single-products">
+                                <div class="productinfo text-center">
+                                    <img src="~/images/shop/product11.jpg" class="img-fluid" style="width: 255px; height: 255px;" alt="" />
+                                    <h2>50k</h2>
+                                    <p>thời trang trẻ trung</p>
+                                    <a href="@Url.Action("Index","Product")" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>xem thêm</a>
+                                </div>
+                                <div class="product-overlay">
+                                    <div class="overlay-content">
+                                        <h2>50k</h2>
+                                        <p>thời trang trẻ trung</p>
+                                        <a href="@Url.Action("Index","Product")" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>xem thêm</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="choose">
+                                <ul class="nav nav-pills nav-justified">
+                                    <li><a href="@Url.Action("Index","Product")"><i class="fa fa-plus-square"></i>Add to wishlist</a></li>
+                                    <li><a href="@Url.Action("Index","Product")"><i class="fa fa-plus-square"></i>Add to compare</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="product-image-wrapper">
+                            <div class="single-products">
+                                <div class="productinfo text-center">
+                                    <img src="~/images/shop/product7.jpg" class="img-fluid" style="width: 255px; height: 255px;" alt=""/>
+
+                                    <h2>199k</h2>
+                                    <p>áo sơ mi đen</p>
+                                    <a href="@Url.Action("Index","Product")" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>xem thêm</a>
+                                </div>
+                                <div class="product-overlay">
+                                    <div class="overlay-content">
+                                        <h2>199k</h2>
+                                        <p>áo sơ mi đen</p>
+                                        <a href="@Url.Action("Index","Product")" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>xem thêm</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="choose">
+                                <ul class="nav nav-pills nav-justified">
+                                    <li><a href="@Url.Action("Index","Product")"><i class="fa fa-plus-square"></i>Add to wishlist</a></li>
+                                    <li><a href="@Url.Action("Index","Product")"><i class="fa fa-plus-square"></i>Add to compare</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="product-image-wrapper">
+                            <div class="single-products">
+                                <div class="productinfo text-center">
+                                    <img src="~/images/shop/product8.jpg" />
+
+                                    <h2>99k</h2>
+                                    <p>quần sort màu kem</p>
+                                    <a href="@Url.Action("Index","Product")" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>xem thêm</a>
+                                </div>
+                                <div class="product-overlay">
+                                    <div class="overlay-content">
+                                        <h2>99k</h2>
+                                        <p>quần sort màu kem</p>
+                                        <a href="@Url.Action("Index","Product")" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>xem thêm</a>
+                                    </div>
+                                </div>
+                                <img src="~/images/home/new.png" class="new" alt="" />
+                            </div>
+                            <div class="choose">
+                                <ul class="nav nav-pills nav-justified">
+                                    <li><a href="@Url.Action("Index","Product")"><i class="fa fa-plus-square"></i>Add to wishlist</a></li>
+                                    <li><a href="@Url.Action("Index","Product")"><i class="fa fa-plus-square"></i>Add to compare</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="product-image-wrapper">
+                            <div class="single-products">
+                                <div class="productinfo text-center">
+                                    <img src="~/images/shop/product9.jpg" class="img-fluid" style="width: 255px; height: 340px;" alt=""/>
+
+                                    <h2>299k</h2>
+                                    <p>quần tây đen</p>
+                                    <a href="@Url.Action("Index","Product")" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>xem thêm</a>
+                                </div>
+                                <div class="product-overlay">
+                                    <div class="overlay-content">
+                                        <h2>299k</h2>
+                                        <p>quần tây đen</p>
+                                        <a href="@Url.Action("Index","Product")" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>xem thêm</a>
+                                    </div>
+                                </div>
+                                <img src="~/images/home/sale.png" class="new" alt="" />
+                            </div>
+                            <div class="choose">
+                                <ul class="nav nav-pills nav-justified">
+                                    <li><a href="@Url.Action("Index","Product")"><i class="fa fa-plus-square"></i>Add to wishlist</a></li>
+                                    <li><a href="@Url.Action("Index","Product")"><i class="fa fa-plus-square"></i>Add to compare</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="product-image-wrapper">
+                            <div class="single-products">
+                                <div class="productinfo text-center">
+
+                                    <img src="~/images/shop/product10.jpg" class="img-fluid" style="width: 255px; height: 343px;" alt="" />
+                                    <h2>269k</h2>
+                                    <p>thắc lưng cao cấp </p>
+                                    <a href="@Url.Action("Index","Product")" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>xem thêm</a>
+                                </div>
+                                <div class="product-overlay">
+                                    <div class="overlay-content">
+                                        <h2>269k</h2>
+                                        <p>thắc lưng cao cấp</p>
+                                        <a href="@Url.Action("Index","Product")" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>xem thêm</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="choose">
+                                <ul class="nav nav-pills nav-justified">
+                                    <li><a href="@Url.Action("Index","Product")"><i class="fa fa-plus-square"></i>Add to wishlist</a></li>
+                                    <li><a href="@Url.Action("Index","Product")"><i class="fa fa-plus-square"></i>Add to compare</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                </div><!--features_items-->
+
+                <div class="category-tab">
+                    <!--category-tab-->
+                    <div class="col-sm-12">
+                        <ul class="nav nav-tabs">
+                            <li class="active"><a href="#non" data-toggle="tab">các loại nón</a></li>
+                            <li><a href="#ao" data-toggle="tab">các loại áo</a></li>
+                            <li><a href="#quan" data-toggle="tab">các loại quần</a></li>
+                            <li><a href="#thaclung" data-toggle="tab">các loại thắc lung</a></li>
+                            <li><a href="#giay" data-toggle="tab">các loại giày</a></li>
+                        </ul>
+                    </div>
+                    <div class="tab-content">
+                        <div class="tab-pane fade active in" id="non">
+                            <div class="col-sm-3">
+                                <div class="product-image-wrapper">
+                                    <div class="single-products">
+                                        <div class="productinfo text-center">
+                                            <img src="~/images/shop/product22.jpg" class="img-fluid" style="width: 230px; height: 183px;" alt="" />
+
+                                            <h2>199k</h2>
+                                            <p>nón cao cấp trắng kem</p>
+                                            <a href="@Url.Action("Index","Product")" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>xem thêm</a>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-3">
+                                <div class="product-image-wrapper">
+                                    <div class="single-products">
+                                        <div class="productinfo text-center">
+                                            <img src="~/images/shop/product23.jpg" style="width: 230px; height: 183px;" alt="" />
+                                            <h2>329k</h2>
+                                            <p>nón đen cao cấp</p>
+                                            <a href="@Url.Action("Index","Product")" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>xem thêm</a>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-3">
+                                <div class="product-image-wrapper">
+                                    <div class="single-products">
+                                        <div class="productinfo text-center">
+                                            <img src="~/images/shop/product24.jpg" />
+                                            <h2>283k</h2>
+                                            <p>nón kem cao cấp</p>
+                                            <a href="@Url.Action("Index","Product")" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>xem thêm</a>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-3">
+                                <div class="product-image-wrapper">
+                                    <div class="single-products">
+                                        <div class="productinfo text-center">
+                                            <img src="~/images/shop/product24.jpg" class="img-fluid" style="width: 255px; height: 183px;" alt="" />
+                                            <h2>128k</h2>
+                                            <p>nón lưỡi trai</p>
+                                            <a href="@Url.Action("Index","Product")" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>xem thêm</a>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tab-pane fade" id="ao">
+                            <div class="col-sm-3">
+                                <div class="product-image-wrapper">
+                                    <div class="single-products">
+                                        <div class="productinfo text-center">
+                                            <img src="~/images/shop/product19.jpg" />
+                                            <h2>388k</h2>
+                                            <p>áo hoodi kem</p>
+                                            <a href="@Url.Action("Index","Product")" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>xem thêm</a>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-3">
+                                <div class="product-image-wrapper">
+                                    <div class="single-products">
+                                        <div class="productinfo text-center">
+                                            <img src="~/images/shop/product21.jpg" />
+                                            <h2>299k</h2>
+                                            <p>áo sơ mi sọc</p>
+                                            <a href="@Url.Action("Index","Product")" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>xem thêm</a>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-3">
+                                <div class="product-image-wrapper">
+                                    <div class="single-products">
+                                        <div class="productinfo text-center">
+                                            <img src="~/images/shop/product3.jpg" />
+                                            <h2>499k</h2>
+                                            <p>áo sơ mi trắng cao cấp</p>
+                                            <a href="@Url.Action("Index","Product")" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>xem thêm</a>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-3">
+                                <div class="product-image-wrapper">
+                                    <div class="single-products">
+                                        <div class="productinfo text-center">
+                                            <img src="~/images/shop/product5.jpg" />
+                                            <h2>279k</h2>
+                                            <p>áo hoodi đỏ</p>
+                                            <a href="@Url.Action("Index","Product")" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>xem thêm</a>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tab-pane fade" id="quan">
+                            <div class="col-sm-3">
+                                <div class="product-image-wrapper">
+                                    <div class="single-products">
+                                        <div class="productinfo text-center">
+                                            <img src="~/images/shop/product8.jpg" />
+                                            <h2>323k</h2>
+                                            <p>quần sort đen</p>
+                                            <a href="@Url.Action("Index","Product")" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>xem thêm</a>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-3">
+                                <div class="product-image-wrapper">
+                                    <div class="single-products">
+                                        <div class="productinfo text-center">
+
+                                            <img src="~/images/shop/product10.jpg" />
+                                            <h2>450k</h2>
+                                            <p>quần sort trắng</p>
+                                            <a href="@Url.Action("Index","Product")" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>xem thêm</a>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-3">
+                                <div class="product-image-wrapper">
+                                    <div class="single-products">
+                                        <div class="productinfo text-center">
+                                            <img src="~/images/shop/product11.jpg" />
+                                            <h2>499k</h2>
+                                            <p>quần tây đen cao cấp</p>
+                                            <a href="@Url.Action("Index","Product")" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>xem thêm</a>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-3">
+                                <div class="product-image-wrapper">
+                                    <div class="single-products">
+                                        <div class="productinfo text-center">
+                                            <img src="~/images/shop/product7.jpg" class="img-fluid" style="width: 255px; height: 245px;" alt="" />
+                                            <h2>499k</h2>
+                                            <p>quần tây xám</p>
+                                            <a href="@Url.Action("Index","Product")" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>xem thêm</a>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tab-pane fade" id="thaclung">
+                            <div class="col-sm-3">
+                                <div class="product-image-wrapper">
+                                    <div class="single-products">
+                                        <div class="productinfo text-center">
+                                            <img src="~/images/shop/product6.jpg" class="img-fluid" style="width: 255px; height: 183px;" alt="" />
+                                            <h2>120.000.000k</h2>
+                                            <p>thắc lưng da cá sấu cao cấp</p>
+                                            <a href="@Url.Action("Index","Product")" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>xem thêm</a>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-3">
+                                <div class="product-image-wrapper">
+                                    <div class="single-products">
+                                        <div class="productinfo text-center">
+                                            <img src="~/images/shop/product9.jpg" />
+                                            <h2>110.000.000k</h2>
+                                            <p>thắc lưng da cao cấp</p>
+                                            <a href="@Url.Action("Index","Product")" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>xem thêm</a>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-3">
+                                <div class="product-image-wrapper">
+                                    <div class="single-products">
+                                        <div class="productinfo text-center">
+                                            <img src="~/images/shop/product25.jpg" class="img-fluid" style="width: 255px; height: 183px;" alt="" />
+                                            <h2>599k</h2>
+                                            <p>thắc lưng đen</p>
+                                            <a href="@Url.Action("Index","Product")" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>xem thêm</a>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-3">
+                                <div class="product-image-wrapper">
+                                    <div class="single-products">
+                                        <div class="productinfo text-center">
+                                            <img src="~/images/shop/product4.jpg" />
+                                            <h2>299k</h2>
+                                            <p>thắc lưng da </p>
+                                            <a href="@Url.Action("Index","Product")" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>xem thêm</a>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tab-pane fade" id="giay">
+                            <div class="col-sm-3">
+                                <div class="product-image-wrapper">
+                                    <div class="single-products">
+                                        <div class="productinfo text-center">
+                                            <img src="~/images/shop/product13.jpg" />
+                                            <h2>499k</h2>
+                                            <p>giày thể thao</p>
+                                            <a href="@Url.Action("Index","Product")" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>xem thêm</a>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-3">
+                                <div class="product-image-wrapper">
+                                    <div class="single-products">
+                                        <div class="productinfo text-center">
+                                            <img src="~/images/shop/product14.jpg" />
+                                            <h2>119.000.000k</h2>
+                                            <p>giày da cao cấp</p>
+                                            <a href="@Url.Action("Index","Product")" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>xem thêm</a>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-3">
+                                <div class="product-image-wrapper">
+                                    <div class="single-products">
+                                        <div class="productinfo text-center">
+                                            <img src="~/images/shop/product16.jpg" class="img-fluid" style="width: 200px; height: 185px;" alt="" />
+                                            <h2>569k</h2>
+                                            <p>giày thể thao</p>
+                                            <a href="@Url.Action("Index","Product")" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>xem thêm</a>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-3">
+                                <div class="product-image-wrapper">
+                                    <div class="single-products">
+                                        <div class="productinfo text-center">
+                                            <img src="~/images/shop/product17.jpg" />
+                                            <h2>129.000.000k</h2>
+                                            <p>giày da cao cấp đen</p>
+                                            <a href="" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>xem thêm</a>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div><!--/category-tab-->
+
+                <div class="recommended_items">
+                    <!--recommended_items-->
+                    <h2 class="title text-center">recommended items</h2>
+
+                    <div id="recommended-item-carousel" class="carousel slide" data-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="item active">
+                                <div class="col-sm-4">
+                                    <div class="product-image-wrapper">
+                                        <div class="single-products">
+                                            <div class="productinfo text-center">
+                                                <img src="~/images/shop/product20.jpg" class="img-fluid" style="width: 255px; height: 340px;" alt=""/>
+                                                <h2>388k</h2>
+                                                <p>áo hoodi kem</p>
+                                                <a href="@Url.Action("Index","Product")" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>xem thêm</a>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-4">
+                                    <div class="product-image-wrapper">
+                                        <div class="single-products">
+                                            <div class="productinfo text-center">
+                                                <img src="~/images/shop/product21.jpg" class="img-fluid" style="width: 255px; height: 340px;" alt=""/>
+                                                <h2>199k</h2>
+                                                <p>áo sơ mi đen</p>
+                                                <a href="@Url.Action("Index","Product")" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>xem thêm</a>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-4">
+                                    <div class="product-image-wrapper">
+                                        <div class="single-products">
+                                            <div class="productinfo text-center">
+                                                <img src="~/images/shop/product22.jpg" class="img-fluid" style="width: 255px; height: 340px;" alt=""/>
+                                                <h2>28 9k</h2>
+                                                <p>Easy Polo Black Edition</p>
+                                                <a href="@Url.Action("Index","Product")" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>xem thêm</a>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="col-sm-4">
+                                    <div class="product-image-wrapper">
+                                        <div class="single-products">
+                                            <div class="productinfo text-center">
+                                                <img src="~/images/shop/product23.jpg" class="img-fluid" style="width: 250px; height: 342px;" alt="" />
+                                                <h2>279k</h2>
+                                                <p>quần sort be</p>
+                                                <a href="@Url.Action("Index","Product")" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>xem thêm</a>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-4">
+                                    <div class="product-image-wrapper">
+                                        <div class="single-products">
+                                            <div class="productinfo text-center">
+                                                <img src="~/images/shop/product24.jpg" class="img-fluid" style="width: 255px; height: 340px;" alt=""/>
+                                                <h2>199k</h2>
+                                                <p>quần sort xanh</p>
+                                                <a href="@Url.Action("Index","Product")" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>xem thêm</a>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-4">
+                                    <div class="product-image-wrapper">
+                                        <div class="single-products">
+                                            <div class="productinfo text-center">
+                                                <img src="~/images/shop/product25.jpg" class="img-fluid" style="width: 255px; height: 340px;" alt="" />
+                                                <h2>499k</h2>
+                                                <p>quần tây xám</p>
+                                                <a href="@Url.Action("Index","Product")" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>xem thêm</a>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <a class="left recommended-item-control" href="#recommended-item-carousel" data-slide="prev">
+                            <i class="fa fa-angle-left"></i>
+                        </a>
+                        <a class="right recommended-item-control" href="#recommended-item-carousel" data-slide="next">
+                            <i class="fa fa-angle-right"></i>
+                        </a>
+                    </div>
+                </div><!--/recommended_items-->
+
+            </div>
+        </div>
+    </div>
+</section>
+</section>

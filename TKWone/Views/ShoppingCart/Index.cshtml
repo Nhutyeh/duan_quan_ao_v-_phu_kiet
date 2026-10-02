@@ -1,0 +1,77 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+@using TKWone.Models;
+@{
+    ViewBag.Title = "Shopping Cart";
+}
+
+@{
+    ViewBag.Title = "Shopping Cart";
+    var temp = (List<lamlaif.Models.Cart>)Session["Cart"];
+}
+<section style="background-color: #D2B48C; ">
+
+
+    @if (Session["Cart"] != null)
+    {
+        using (Html.BeginForm("UpdateCart", "ShoppingCart", FormMethod.Post))
+        {
+            <table class="table">
+                <tr>
+                    <th>Name</th>
+                    <th>Quantity</th>
+                    <th>Price</th>
+                    <th>Sub Total</th>
+                    <th>Action</th>
+                </tr>
+                @foreach (var cart in temp)
+                {
+                    double p = Convert.ToDouble(cart.Product.ProPrice);
+                    int q = Convert.ToInt32(cart.Quantity);
+                    double subtotal = p * q;
+                    <tr>
+                        <td>@cart.Product.ProName</td>
+                        <td><input type="text" name="quantity" value="@cart.Quantity" /></td>
+                        <td>@cart.Product.ProPrice</td>
+                        <td>@subtotal</td>
+                        <td>
+                            @Html.ActionLink("Delete", "RemoveItem", new { Id = cart.Product.ProId }, new { onclick = "return confirm('Are you sure?');" })
+                        </td>
+                    </tr>
+                }
+                <tr>
+                    <td colspan="5" style="text-align:right">
+                        <b>Total: @temp.Sum(x => x.Quantity * x.Product.ProPrice)</b>
+                    </td>
+                </tr>
+            </table>
+            <div>
+                @Html.ActionLink("Continue Shopping", "Index", "Product")
+                |
+                @Html.ActionLink("Empty Cart", "ClearCart", "ShoppingCart")
+                |
+                @Html.ActionLink("Check Out", "CheckOut", "ShoppingCart")
+                |
+                <input type="submit" value="Update Cart" />
+            </div>
+        }
+    }
+    else
+    {
+        <h2>No items in your cart!</h2>
+    }
+
+    <script>
+        const inputs = document.querySelectorAll("input[name='quantity']");
+        inputs.forEach(input => {
+            input.addEventListener("keypress", function (e) {
+                if (!/\d/.test(e.key)) {
+                    e.preventDefault();
+                    alert("Please enter digits only!");
+                }
+            });
+        });</script>
+    </section>

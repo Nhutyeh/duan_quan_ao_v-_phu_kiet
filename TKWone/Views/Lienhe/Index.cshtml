@@ -1,0 +1,64 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+<section style="background-color: #D2B48C; ">
+
+    <div style="text-align:center">
+        <h1 style="font-size: 40px; font-weight: bold; margin-bottom: 10px;">LIÊN HỆ VỚI CHÚNG TÔI</h1>
+        <p style="font-size: 18px;"><i>Chúng tôi luôn sẵn sàng lắng nghe bạn 24/7</i></p>
+    </div>
+
+    <div class="container" style="margin-top: 60px; margin-bottom: 60px;">
+
+        @if (ViewBag.SuccessMessage != null)
+        {
+            <div class="alert alert-success text-center" style="margin-bottom: 30px; font-size: 16px;">
+                <span class="glyphicon glyphicon-ok-sign"></span> @ViewBag.SuccessMessage
+            </div>
+        }
+
+        <div class="row">
+
+
+            <div class="col-md-7">
+                <div style="padding: 10px 20px;">
+                    <h3 style="font-weight: bold; margin-top: 0;">GỬI TIN NHẮN</h3>
+                    <p>Điền thông tin vào biểu mẫu bên dưới, chúng tôi sẽ phản hồi trong vòng 24h.</p>
+                    <br>
+
+                    <form action="@Url.Action("SendContact", "LienHe")" method="post">
+                        <div class="row">
+                            <div class="col-sm-6 form-group">
+                                <label>Họ và Tên</label>
+                                <input class="form-control input-lg" id="name" name="name" placeholder="Nguyễn Văn A" type="text" required
+                                       style="border-radius: 0; border: 1px solid #ccc;">
+                            </div>
+                            <div class="col-sm-6 form-group">
+                                <label>Email</label>
+                                <input class="form-control input-lg" id="email" name="email" placeholder="email" type="email" required
+                                       style="border-radius: 0; border: 1px solid #ccc;">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Tiêu đề</label>
+                            <input class="form-control input-lg" name="subject" placeholder="Bạn cần hỗ trợ về vấn đề gì?" type="text"
+                                   style="border-radius: 0; border: 1px solid #ccc;">
+                        </div>
+
+                        <div class="form-group">
+                            <label>Nội dung tin nhắn</label>
+                            <textarea class="form-control input-lg" id="comments" name="comments" placeholder="Nhập nội dung chi tiết..." rows="6" required
+                                      style="border-radius: 0; border: 1px solid #ccc;"></textarea>
+                        </div>
+
+                        <button class="btn btn-primary btn-lg pull-right" type="submit" style="padding: 10px 40px; border-radius: 0; font-weight: bold;">
+                            <span class="glyphicon glyphicon-send"></span> GỬI
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    </section>
